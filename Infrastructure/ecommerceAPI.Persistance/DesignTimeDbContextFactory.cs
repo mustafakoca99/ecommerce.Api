@@ -1,6 +1,7 @@
 ﻿using ecommerceAPI.Persistance.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
 
 namespace ecommerceAPI.Persistance
 {
@@ -9,9 +10,7 @@ namespace ecommerceAPI.Persistance
         public EcommerceAPIDbContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<EcommerceAPIDbContext> dbContextOptionsBuilder = new();
-            dbContextOptionsBuilder.UseSqlServer(
-                "server=(localdb)\\kmssqllocaldb;database=ecommerce;user=sa;password=M.k12345"
-                );
+            dbContextOptionsBuilder.UseSqlServer(StaticConfigurations.ConnectionString);
             return new(dbContextOptionsBuilder.Options);
         }
     }
