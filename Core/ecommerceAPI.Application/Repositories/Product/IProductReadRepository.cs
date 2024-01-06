@@ -1,6 +1,8 @@
-﻿namespace ecommerceAPI.Application.Repositories.Product
+﻿using ecommerceAPI.Domain.Entites;
+
+namespace ecommerceAPI.Application.Repositories
 {
-    public interface IProductReadRepository
+    public interface IProductReadRepository : IReadRepository<Product>
     {
     }
 }
