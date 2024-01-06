@@ -2,7 +2,7 @@
 
 namespace ecommerceAPI.Domain.Entites
 {
-    public class Order: BaseEntity
+    public class Order : BaseEntity
     {
         public Guid CustomerId { get; set; }
         public Customer Customer { get; set; }
