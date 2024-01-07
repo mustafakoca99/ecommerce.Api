@@ -21,7 +21,7 @@ namespace ecommerceAPI.Persistance.Repositories
             return entityEntry.State == EntityState.Added;
         }
 
-        public async Task<bool> AddAsync(List<T> entity)
+        public async Task<bool> AddRangeAsync(List<T> entity)
         {
             await Table.AddRangeAsync(entity);
             return true;

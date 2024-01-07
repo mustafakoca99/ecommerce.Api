@@ -5,7 +5,7 @@ namespace ecommerceAPI.Application.Repositories
     public interface IWriteRepository<T> : IRepository<T> where T : BaseEntity
     {
         Task<bool> AddAsync(T entity);
-        Task<bool> AddAsync(List<T> entity);
+        Task<bool> AddRangeAsync(List<T> entity);
         bool Remove(T entity);
         Task<bool> Remove(string id);
         bool RemoveRange(List<T> entities);
