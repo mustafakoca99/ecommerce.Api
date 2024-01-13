@@ -1,6 +1,11 @@
+using ecommerceAPI.API;
 using ecommerceAPI.Persistance;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+ConfigureLogging.Configure();
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddPersistenceServices();
