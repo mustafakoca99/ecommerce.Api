@@ -2,7 +2,7 @@
 
 namespace ecommerceAPI.Persistance
 {
-    static class StaticConfigurations
+    static public class StaticConfigurations
     {
         static public string ConnectionString
         {
