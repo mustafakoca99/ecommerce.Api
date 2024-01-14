@@ -6,6 +6,7 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//health check
 builder.Services
     .AddHealthChecks()
     .AddSqlServer(StaticConfigurations.ConnectionString);
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//health check
 app.UseRouting()
     .UseEndpoints(endpoints =>
     {
